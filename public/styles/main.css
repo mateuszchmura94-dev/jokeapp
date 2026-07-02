@@ -1,0 +1,156 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background-color: #3B4482;
+  font-family: "Roboto Slab", serif;
+  color: white;
+ 
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+  width: 100%; /* Zapewnia, że tekst nie wyjdzie poza ekran */
+}
+
+.ranchers-regular {
+  font-family: "Ranchers", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.form-container {
+  width: 100%;
+  max-width: 600px; 
+  background-color: rgba(255, 255, 255, 0.07);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+
+.joke-text {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+
+input[type="submit"] {
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0.8rem 2.5rem;
+  border: none;
+  border-radius: 50px;
+  background-color: #82803B;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(130, 128, 59, 0.4); 
+  transition: all 0.2s ease-in-out;
+  width: auto; 
+}
+
+input[type="submit"]:hover {
+  background-color: #969445;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(130, 128, 59, 0.6);
+}
+
+input[type="submit"]:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 10px rgba(130, 128, 59, 0.4);
+}
+
+
+
+@media (max-width: 600px) {
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  
+  .form-container {
+    padding: 1.5rem;
+  }
+
+  
+  .joke-text {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  
+  input[type="submit"] {
+    width: 100%; 
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+  }
+}
+
+
+.button-group {
+  display: flex;
+  flex-direction: column; /* Domyślnie na telefonach jeden pod drugim */
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.btn-secondary {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Roboto Slab", serif;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 0.5rem;
+}
+
+.btn-secondary:hover {
+  color: white;
+}
+
+
+@media (min-width: 601px) {
+  .button-group {
+    flex-direction: row; 
+    gap: 1.5rem;
+  }
+}

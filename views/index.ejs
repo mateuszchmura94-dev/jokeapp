@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JokeAPI</title>
+    <link rel="stylesheet" type="text/css" href="/styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ranchers&family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="app-container">
+        <h1 id="main-title" class="ranchers-regular">Pożartujemy?</h1>
+        
+        <div class="form-container">
+            <p id="joke-pl" class="joke-text">
+                <%= locals.joke ? joke : "Wciśnij przycisk żeby się pośmiać xD" %>
+            </p>
+
+            <% if (locals.originalJoke) { %>
+                <p id="joke-en" class="joke-text" style="display: none;">
+                    <%= originalJoke %>
+                </p>
+            <% } %>
+            
+            <form id="form" method="post">
+                <div class="button-group">
+                    <input id="post" type="submit" value="Daj żart!" formaction="/wynik">
+                    
+                    <% if (locals.originalJoke) { %>
+                        <button type="button" id="toggle-original" class="btn-secondary">
+                            Złe tłumaczenie? Zobacz oryginał
+                        </button>
+                    <% } %>
+                </div>
+            </form>
+        </div>
+    </main>
+    
+     <script>
+        window.hasJoke = <%= locals.joke ? true : false %>;
+    </script>
+    <script src="./scripts/script.js"></script>
+
+</body>
+</html>

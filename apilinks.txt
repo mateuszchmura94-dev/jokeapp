@@ -1,0 +1,6 @@
+city
+http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={API key}
+zipcode
+http://api.openweathermap.org/geo/1.0/zip?zip={zip code},{country code}&appid={API key}
+weather
+https://api.openweathermap.org/data/3.0/onecall/overview?lat={lat}&lon={lon}&appid={API key}
